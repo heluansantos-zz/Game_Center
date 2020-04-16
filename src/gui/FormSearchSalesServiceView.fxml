@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="377.0" prefWidth="1028.0" styleClass="label2" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.FormSearchSalesServiceController">
+   <children>
+      <VBox prefHeight="159.0" prefWidth="1028.0">
+         <children>
+            <ToolBar prefHeight="50.0" prefWidth="1028.0" styleClass="menu-bar2" stylesheets="@../application/application.css">
+               <items>
+                  <HBox prefHeight="32.0" prefWidth="1016.0">
+                     <children>
+                        <TextField fx:id="textFieldId" prefHeight="25.0" prefWidth="175.0" promptText="Digite o id" stylesheets="@modena.css">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                      <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#onButtonSearchAction" text="Pesquisar">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="buttonShowData" mnemonicParsing="false" onAction="#onButtonShowDataAction" text="Ver Resumo">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#onButtonUpdateAction" text="Atualizar Tabela">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <TextField fx:id="textFieldDelete" promptText="Digite o id" stylesheets="@modena.css">
+                           <HBox.margin>
+                              <Insets left="40.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                      <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#onButtonCancelAction" text="Cancelar">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="buttonClose" mnemonicParsing="false" onAction="#onButtonCloseAction" text="Fechar">
+                           <HBox.margin>
+                              <Insets left="40.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </items>
+            </ToolBar>
+            <TableView fx:id="tableViewSales" prefHeight="72.0" prefWidth="1028.0" stylesheets="@../application/application.css">
+              <columns>
+                <TableColumn fx:id="tableColumnId" minWidth="35.0" prefWidth="35.0" text="ID" />
+                <TableColumn fx:id="tableColumnIdClient" minWidth="80.0" text="ID CLIENTE" />
+                  <TableColumn fx:id="tableColumnIdService" minWidth="90.0" prefWidth="90.0" text="ID SERVIÇO" />
+                  <TableColumn fx:id="tableColumnDate" minWidth="120.0" prefWidth="120.0" text="DATA" />
+                  <TableColumn fx:id="tableColumnEDIT" minWidth="100.0" prefWidth="100.0" />
+                  <TableColumn maxWidth="1.0" minWidth="1.0" prefWidth="1.0" text="Column X" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <GridPane layoutY="175.0" prefHeight="150.0" prefWidth="964.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="492.0" minWidth="54.0" prefWidth="119.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="946.0" minWidth="296.0" prefWidth="696.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="946.0" minWidth="0.0" prefWidth="149.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="labelId" styleClass="label2" stylesheets="@../application/application.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelIdService" styleClass="label2" stylesheets="@../application/application.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelDate" styleClass="label2" stylesheets="@../application/application.css" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label stylesheets="@../application/application.css" text="ID :" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="ID SERVIÇO:" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="DATA:" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="128.0" text="---------------------">
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="789.0" text="-------------------------------------------------------------------------------------------------------------------------------------------------" GridPane.columnIndex="1" />
+            <Label stylesheets="@../application/application.css" text="ID CLIENTE:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="5">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.rowIndex="7">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="128.0" text="---------------------" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="128.0" text="---------------------" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="128.0" text="---------------------" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="118.0" text="---------------------" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="18.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="labelIdClient" styleClass="label2" stylesheets="@../application/application.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" rotate="90.0" text="------" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="7">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="17.0" text="---" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="789.0" text="-------------------------------------------------------------------------------------------------------------------------------------------------" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="20.0" prefWidth="789.0" text="-------------------------------------------------------------------------------------------------------------------------------------------------" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="20.0" prefWidth="789.0" text="-------------------------------------------------------------------------------------------------------------------------------------------------" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label prefHeight="20.0" prefWidth="789.0" text="-------------------------------------------------------------------------------------------------------------------------------------------------" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="17.0" text="---" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="17.0" text="---" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="17.0" text="---" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="6">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+            <Label alignment="BASELINE_LEFT" contentDisplay="RIGHT" prefHeight="20.0" prefWidth="17.0" text="---" textOverrun="CENTER_WORD_ELLIPSIS" GridPane.columnIndex="2" GridPane.rowIndex="8">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
